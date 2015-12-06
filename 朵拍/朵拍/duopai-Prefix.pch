@@ -1,0 +1,77 @@
+//
+//  mysite-Prefix.pch
+//  mysite
+//
+//  Created by 林 李 on 15/2/28.
+//  Copyright (c) 2015年 cnhnb. All rights reserved.
+//
+
+#ifndef mysite_mysite_Prefix_pch
+#define mysite_mysite_Prefix_pch
+
+typedef void (^MSBaseCompleteBlock)();
+
+#ifdef __OBJC__
+    #import <SVProgressHUD/SVProgressHUD.h>
+
+//    #import <TSMessages/TSMessage.h>
+    #import <JDStatusBarNotification/JDStatusBarNotification.h>
+//    #import <UMengAnalytics/MobClick.h>
+//    #import <UMengFeedback/UMFeedback.h>
+//    #import <DateTools/DateTools.h>
+    #import <MJRefresh/MJRefresh.h>
+    #import <MMDrawerController/MMDrawerController.h>
+    #import <MMDrawerController/UIViewController+MMDrawerController.h>
+    #import <Masonry/Masonry.h>
+    #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#endif
+
+
+#ifdef __OBJC__
+//    #import "NSDate+Utilities.h"
+    #import "UIColor+utils.h"
+#import "HNNavigationController.h"
+//    #import "DBQueue.h"
+//    #import "HNResponse.h"
+//    #import "NSString+codec.h"
+#endif
+
+static NSString* const HNLoginRequestNotification = @"HNLoginRequestNotification";//登录的通知
+static NSString* const HNLoginCheckNotification = @"HNLoginCheckNotification";//检测是否需要登录
+
+#define HNTEST 1
+
+#define UMENG_APPKEY @"533d028256240b727e01ed41"
+#define BAIDUMAPKEY  @"021KLygNobbKPryhqixOS9eO"
+
+/**
+ 用户是否 想使用手势锁屏，这个配置，保存在NSUserDefaults。
+ */
+#ifndef KEY_UserDefaults_isGestureLockEnabledOrNotByUser
+#define KEY_UserDefaults_isGestureLockEnabledOrNotByUser @"KEY_UserDefaults_isGestureLockEnabledOrNotByUser"
+#endif
+
+/**
+ 显示手势轨迹
+ */
+#ifndef KEY_UserDefaults_isShowGestureTrace
+#define KEY_UserDefaults_isShowGestureTrace              @"KEY_UserDefaults_isShowGestureTrace"
+#endif
+
+/**
+ 用户是否 想使用touchID解锁，这个配置，保存在NSUserDefaults。
+ */
+#ifndef KEY_UserDefaults_isTouchIdEnabledOrNotByUser
+#define KEY_UserDefaults_isTouchIdEnabledOrNotByUser     @"KEY_UserDefaults_isTouchIdEnabledOrNotByUser"
+#endif
+
+
+//屏幕大小
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+//#define IS_IOS7  [[[UIDevice currentDevice] systemVersion] floatValue] >= 7
+//#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending)
+
+
+
+#endif
