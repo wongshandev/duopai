@@ -74,4 +74,7 @@ static NSString* const HNLoginCheckNotification = @"HNLoginCheckNotification";//
 
 
 #define __TI_BLE_CONTROL__ //蓝牙4.0控制开关
+
+#define __HS_CAMERA__ //自定义的摄像界面。
+
 #endif

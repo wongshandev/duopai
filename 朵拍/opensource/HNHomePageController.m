@@ -8,12 +8,19 @@
 
 #import "HNHomePageController.h"
 #import "HNRecordViewController.h"
+#import "HNHomeTableCell.h"
+#import "CameraMian.h"
+
+
 
 #ifdef __TI_BLE_CONTROL__
 CBCentralManager *manager;
 CBPeripheral *_peripheral;
 /* 写数据的时候要用到这个 */
 CBCharacteristic *writeCharacteristic;
+NSString * BleTitle = nil;
+/* 协议中的流水号。累加下去。 */
+short int sendSerialNumber = 0;
 #endif
 @interface HNHomePageController ()
 
@@ -31,6 +38,7 @@ CBCharacteristic *writeCharacteristic;
 #ifdef __TI_BLE_CONTROL__
     //第一步，启动蓝牙管理器
     NSLog(@"第一步，启动蓝牙管理器。");
+    self.title = @"正在打开蓝牙设备";
     manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
 #endif
 }
@@ -47,8 +55,13 @@ CBCharacteristic *writeCharacteristic;
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 - (IBAction)onRecordButtonClicked:(UIButton *)sender {
+#ifdef __HS_CAMERA__
+    CameraMian * vc = [[CameraMian alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+#else
     HNRecordViewController* recorder = [[HNRecordViewController alloc] initWithNibName:@"HNRecordViewController" bundle:nil];
     [self.navigationController pushViewController:recorder animated:YES];
+#endif
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -58,6 +71,7 @@ CBCharacteristic *writeCharacteristic;
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
@@ -83,6 +97,7 @@ CBCharacteristic *writeCharacteristic;
     switch (central.state) {
         case CBCentralManagerStatePoweredOn:
             NSLog(@"第二步，蓝牙已打开,扫描外设");
+            self.title = @"正在扫描";
             if(manager.state == CBCentralManagerStatePoweredOn)
                 [manager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:kServiceUUID]] options:@{CBCentralManagerScanOptionAllowDuplicatesKey:@YES}];   break;
         case CBCentralManagerStateUnsupported:
@@ -90,6 +105,7 @@ CBCharacteristic *writeCharacteristic;
             break;
         default:
             NSLog(@"没打开蓝牙");
+            
             break;
     }
 }
@@ -97,6 +113,7 @@ CBCharacteristic *writeCharacteristic;
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     NSLog(@"第三步，已发现蓝牙设备，停止扫描。。开始链接");
+    self.title = @"正在连接机器人";
     _peripheral = peripheral;
     NSLog(@"%@",_peripheral);
     [manager stopScan];
@@ -108,13 +125,14 @@ CBCharacteristic *writeCharacteristic;
     [_peripheral setDelegate:self];
     [_peripheral discoverServices:nil];
     NSLog(@"第四步，已经链接上蓝牙了。开始发送数据 向左转。。。写数据");
+    self.title = @"正在发送向左转命令";
     [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_right length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithoutResponse];
 }
 //外设断开了
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
     NSLog(@"断开了。。。。");
-    
+    self.title = @"蓝牙已断开";
 }
 /*
  *  @method UUIDToString
@@ -197,6 +215,19 @@ CBCharacteristic *writeCharacteristic;
     }
 }
 
+- (void)BleControlTurnRight
+{
+    /* 流水号是累加的。每一次发送命令，流水号都要累加一次。 */
+    sendSerialNumber += 1;
+    memcpy(cotrol_turn_right+4, &sendSerialNumber, 4);
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_right length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithoutResponse];
+}
+- (void)BleControlTurnLeft
+{
+    sendSerialNumber += 1;
+    memcpy(cotrol_turn_right+4, &sendSerialNumber, 4);
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_left length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithoutResponse];
+}
 
 #endif
 @end
