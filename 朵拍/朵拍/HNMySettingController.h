@@ -8,7 +8,7 @@
 
 #import "HNTableViewController.h"
 typedef NS_ENUM(NSInteger, HNSettingSelection){
-    HNSettingSelectionMyProfile,//我的祝福
+    HNSettingSelectionMyProfile,//朵拍
     HNSettingSelectionResetPassWord,//我的亲友
     HNSettingSelectionAppInfomation,//我发出的祝福
     HNSettingSelectionVersionInfomation,

@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		65B75E41AAFFF6D6DF2D6E07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D747C3586DE5AEFCAF7DDB /* libPods.a */; };
+		A7BAB5161C14628B000FF9ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BAB5131C14628B000FF9ED /* Default-568h@2x.png */; };
+		A7BAB5171C14628B000FF9ED /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BAB5141C14628B000FF9ED /* icon.png */; };
+		A7BAB5181C14628B000FF9ED /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BAB5151C14628B000FF9ED /* icon@2x.png */; };
+		A7BAB51A1C146642000FF9ED /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB5191C146642000FF9ED /* CoreBluetooth.framework */; };
+		A7BAB51C1C146650000FF9ED /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB51B1C146650000FF9ED /* CoreTelephony.framework */; };
+		A7BAB51E1C14665A000FF9ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB51D1C14665A000FF9ED /* CoreGraphics.framework */; };
+		A7BAB5201C146664000FF9ED /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB51F1C146664000FF9ED /* CoreAudioKit.framework */; };
 		F239449B1C12ABAF00C0458F /* HNHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F239449A1C12ABAF00C0458F /* HNHomePageController.m */; };
 		F23944A81C12AE7C00C0458F /* HNSettingBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F23944A01C12AE7C00C0458F /* HNSettingBaseCell.m */; };
 		F23944A91C12AE7C00C0458F /* HNSettingBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F23944A11C12AE7C00C0458F /* HNSettingBaseCell.xib */; };
@@ -64,6 +71,13 @@
 /* Begin PBXFileReference section */
 		5FCA47FD71C8E17B1EB58605 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7E9A1630C3699A0F9DB19F14 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A7BAB5131C14628B000FF9ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A7BAB5141C14628B000FF9ED /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A7BAB5151C14628B000FF9ED /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		A7BAB5191C146642000FF9ED /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A7BAB51B1C146650000FF9ED /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A7BAB51D1C14665A000FF9ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7BAB51F1C146664000FF9ED /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		E1D747C3586DE5AEFCAF7DDB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23944991C12ABAF00C0458F /* HNHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNHomePageController.h; sourceTree = "<group>"; };
 		F239449A1C12ABAF00C0458F /* HNHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNHomePageController.m; sourceTree = "<group>"; };
@@ -166,6 +180,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BAB5201C146664000FF9ED /* CoreAudioKit.framework in Frameworks */,
+				A7BAB51E1C14665A000FF9ED /* CoreGraphics.framework in Frameworks */,
+				A7BAB51C1C146650000FF9ED /* CoreTelephony.framework in Frameworks */,
+				A7BAB51A1C146642000FF9ED /* CoreBluetooth.framework in Frameworks */,
 				65B75E41AAFFF6D6DF2D6E07 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +191,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7BAB5111C14624E000FF9ED /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A7BAB5121C146259000FF9ED /* Image */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		A7BAB5121C146259000FF9ED /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A7BAB5131C14628B000FF9ED /* Default-568h@2x.png */,
+				A7BAB5141C14628B000FF9ED /* icon.png */,
+				A7BAB5151C14628B000FF9ED /* icon@2x.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		F23944981C12AB8B00C0458F /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +225,7 @@
 		F239449C1C12AD6200C0458F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A7BAB5111C14624E000FF9ED /* Resource */,
 				F239449D1C12AD6900C0458F /* personal */,
 				F23944EE1C142BCF00C0458F /* record */,
 				F23944981C12AB8B00C0458F /* home */,
@@ -390,6 +427,10 @@
 		F4C68022801679ACAD916C54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7BAB51F1C146664000FF9ED /* CoreAudioKit.framework */,
+				A7BAB51D1C14665A000FF9ED /* CoreGraphics.framework */,
+				A7BAB51B1C146650000FF9ED /* CoreTelephony.framework */,
+				A7BAB5191C146642000FF9ED /* CoreBluetooth.framework */,
 				E1D747C3586DE5AEFCAF7DDB /* libPods.a */,
 			);
 			name = Frameworks;
@@ -474,10 +515,13 @@
 				F27D8C8D1C03477E00012592 /* Assets.xcassets in Resources */,
 				F27D8CAD1C035BD200012592 /* HNLeftBaseDrawerCell.xib in Resources */,
 				F27D8CA71C035BA700012592 /* HNLeftSideDrawerController.xib in Resources */,
+				A7BAB5171C14628B000FF9ED /* icon.png in Resources */,
 				F27D8C8B1C03477E00012592 /* Main.storyboard in Resources */,
+				A7BAB5161C14628B000FF9ED /* Default-568h@2x.png in Resources */,
 				F23944D51C14075A00C0458F /* JKImagePickerController.strings in Resources */,
 				F23944D61C14075A00C0458F /* ImagesPicker.xcassets in Resources */,
 				F23944ED1C1418C400C0458F /* HNHomeTableCell.xib in Resources */,
+				A7BAB5181C14628B000FF9ED /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

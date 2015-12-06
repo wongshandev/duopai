@@ -73,5 +73,5 @@ static NSString* const HNLoginCheckNotification = @"HNLoginCheckNotification";//
 //#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending)
 
 
-
+#define __TI_BLE_CONTROL__ //蓝牙4.0控制开关
 #endif
