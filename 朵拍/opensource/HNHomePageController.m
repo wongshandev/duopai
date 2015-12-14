@@ -10,8 +10,9 @@
 #import "HNRecordViewController.h"
 #import "HNHomeTableCell.h"
 #import "CameraMian.h"
+#import "BabyBluetooth.h"
 
-
+#define channelOnPeropheralView nil
 
 #ifdef __TI_BLE_CONTROL__
 CBCentralManager *manager;
@@ -22,25 +23,102 @@ NSString * BleTitle = nil;
 /* 协议中的流水号。累加下去。 */
 short int sendSerialNumber = 0;
 #endif
-@interface HNHomePageController ()
+
+
+@interface HNHomePageController ()<deviceShouldRotationDelegate>{
+//    UITableView *tableView;
+NSMutableArray *peripherals;
+NSMutableArray *peripheralsAD;
+}
+
+@property(nonatomic,strong)BabyBluetooth *baby;
 
 @end
 
 @implementation HNHomePageController
+-(void)dealloc{
+    NSLog(@"dealloc  HNHomePageController");
+}
 -(void)initTableView{
     [self.tableView registerNib:[UINib nibWithNibName:@"HNHomeTableCell" bundle:nil] forCellReuseIdentifier:@"homeCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.scrollEnabled = NO;
+    self.navigationController.toolbarHidden = NO;
+    UIBarButtonItem* item1 = [[UIBarButtonItem alloc] initWithTitle:@"打开" style:UIBarButtonItemStyleBordered target:self action:@selector(openDevice)];
+    UIBarButtonItem* item12 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem* item2 = [[UIBarButtonItem alloc] initWithTitle:@"左转" style:UIBarButtonItemStyleBordered target:self action:@selector(turnleftDevice)];
+    UIBarButtonItem* item23 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem* item3 = [[UIBarButtonItem alloc] initWithTitle:@"右转" style:UIBarButtonItemStyleBordered target:self action:@selector(turnRightDevice)];
+    UIBarButtonItem* item34 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem* item4 = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleBordered target:self action:@selector(closeDevice)];
+    self.toolbarItems = @[item1,item12,item2,item23,item3,item34,item4];
+}
+
+-(void)openDevice{
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_open length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
+    /* 流水号是累加的。每一次发送命令，流水号都要累加一次。 */
+    //    sendSerialNumber += 1;
+    //    memcpy(cotrol_turn_open+4, &sendSerialNumber, 4);
+}
+
+-(void)turnleftDevice{
+    sendSerialNumber += 1;
+    memcpy(cotrol_turn_right+4, &sendSerialNumber, 4);
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_left length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
+}
+
+-(void)turnRightDevice{
+    sendSerialNumber += 1;
+    memcpy(cotrol_turn_right+4, &sendSerialNumber, 4);
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_right length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
+}
+-(void)closeDevice{
+//    sendSerialNumber += 1;
+//    memcpy(cotrol_turn_right+4, &sendSerialNumber, 4);
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_closed length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
+}
+
+-(void)deviceShouldTurnLeft{
+    [self turnleftDevice];
+}
+
+-(void)deviceShouldTurnRight{
+    [self turnRightDevice];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initTableView];
+    
 #ifdef __TI_BLE_CONTROL__
     //第一步，启动蓝牙管理器
     NSLog(@"第一步，启动蓝牙管理器。");
     self.title = @"正在打开蓝牙设备";
     manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    
+//    //初始化其他数据 init other
+//    peripherals = [[NSMutableArray alloc]init];
+//    peripheralsAD = [[NSMutableArray alloc]init];
+//    
+//    //初始化BabyBluetooth 蓝牙库
+//    _baby = [BabyBluetooth shareBabyBluetooth];
+//    //设置蓝牙委托
+//    [self babyDelegate];
+    
 #endif
+}
+
+//-(void)viewDidAppear:(BOOL)animated{
+//    NSLog(@"viewDidAppear");
+//    //停止之前的连接
+//    [_baby cancelAllPeripheralsConnection];
+//    //设置委托后直接可以使用，无需等待CBCentralManagerStatePoweredOn状态。
+//    _baby.scanForPeripherals().begin();
+//    //baby.scanForPeripherals().begin().stop(10);
+//}
+
+-(void)loadData:(CBPeripheral*)currPeripheral{
+    [SVProgressHUD showInfoWithStatus:@"开始连接设备"];
+//    _baby.having(currPeripheral).and.channel(channelOnPeropheralView).then.connectToPeripherals().discoverServices().discoverCharacteristics().readValueForCharacteristic().discoverDescriptorsForCharacteristic().readValueForDescriptors().begin();
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -56,7 +134,8 @@ short int sendSerialNumber = 0;
 }
 - (IBAction)onRecordButtonClicked:(UIButton *)sender {
 #ifdef __HS_CAMERA__
-    CameraMian * vc = [[CameraMian alloc]init];
+    CameraMian * vc = [[CameraMian alloc] initWithNibName:@"CameraMian" bundle:nil];
+    vc.deviceDelgate = self;
     [self.navigationController pushViewController:vc animated:YES];
 #else
     HNRecordViewController* recorder = [[HNRecordViewController alloc] initWithNibName:@"HNRecordViewController" bundle:nil];
@@ -79,7 +158,16 @@ short int sendSerialNumber = 0;
     return 200;
 }
 
+
+
+
+
 #ifdef __TI_BLE_CONTROL__
+
+
+
+
+
 //开始写数据
 - (void)BLEwriteValue:(NSString *)command per:(CBPeripheral *)p charact:(CBCharacteristic *)writechararcter
 {
@@ -112,7 +200,6 @@ short int sendSerialNumber = 0;
 //查到外设后，停止扫描，连接设备
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    NSLog(@"第三步，已发现蓝牙设备，停止扫描。。开始链接");
     self.title = @"正在连接机器人";
     _peripheral = peripheral;
     NSLog(@"%@",_peripheral);
@@ -124,16 +211,31 @@ short int sendSerialNumber = 0;
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     [_peripheral setDelegate:self];
     [_peripheral discoverServices:nil];
-    NSLog(@"第四步，已经链接上蓝牙了。开始发送数据 向左转。。。写数据");
-    self.title = @"正在发送向左转命令";
-    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_right length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithoutResponse];
+    self.title = @"正在初始化....";
+//    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_right length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithoutResponse];
 }
+
 //外设断开了
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
     NSLog(@"断开了。。。。");
     self.title = @"蓝牙已断开";
+    switch (central.state) {
+        case CBCentralManagerStatePoweredOn:
+            NSLog(@"第二步，蓝牙已打开,扫描外设");
+            self.title = @"正在扫描";
+            if(manager.state == CBCentralManagerStatePoweredOn)
+                [manager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:kServiceUUID]] options:@{CBCentralManagerScanOptionAllowDuplicatesKey:@YES}];   break;
+        case CBCentralManagerStateUnsupported:
+            NSLog(@"设备不支持BLE4.0");
+            break;
+        default:
+            NSLog(@"没打开蓝牙");
+            
+            break;
+    }
 }
+
 /*
  *  @method UUIDToString
  *
@@ -176,10 +278,11 @@ short int sendSerialNumber = 0;
     for (CBCharacteristic *c in service.characteristics) {
         NSLog(@"特征 UUID: %@ :(%@)",c.UUID.data,c.UUID);
         
-        writeCharacteristic = c;
-        if ([c.UUID isEqual:[CBUUID UUIDWithString:kCharacteristicUUID]])
+        if ([c.UUID isEqual:[CBUUID UUIDWithString:kCharacteristicWirteUUID]])
         {
             writeCharacteristic = c;
+            [SVProgressHUD showSuccessWithStatus:@"已连接,您需要点击打开设备"];
+             self.title = @"已经连接";
         }
     }
 }
@@ -212,22 +315,33 @@ short int sendSerialNumber = 0;
         NSLog(@"ERROR: Result of writing to characteristic: %@ of service: %@ with error: %@", characteristic.UUID, characteristic.service.UUID, error);
     }else{
         NSLog(@"发送数据成功");
+        //[self BleControlTurnLeft];
     }
 }
 
-- (void)BleControlTurnRight
-{
+- (void)BleControlTurnOpen{
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_open length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
+    /* 流水号是累加的。每一次发送命令，流水号都要累加一次。 */
+//    sendSerialNumber += 1;
+//    memcpy(cotrol_turn_open+4, &sendSerialNumber, 4);
+}
+
+
+- (void)BleControlTurnRight{
     /* 流水号是累加的。每一次发送命令，流水号都要累加一次。 */
     sendSerialNumber += 1;
     memcpy(cotrol_turn_right+4, &sendSerialNumber, 4);
-    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_right length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithoutResponse];
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_right length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
 }
+
 - (void)BleControlTurnLeft
 {
     sendSerialNumber += 1;
     memcpy(cotrol_turn_right+4, &sendSerialNumber, 4);
-    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_left length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithoutResponse];
+    [_peripheral writeValue:[NSData dataWithBytes:cotrol_turn_left length:16] forCharacteristic:writeCharacteristic type:CBCharacteristicWriteWithResponse];
 }
+
+
 
 #endif
 @end

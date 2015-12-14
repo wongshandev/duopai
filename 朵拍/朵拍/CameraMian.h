@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "HNHomePageController.h"
+@protocol deviceShouldRotationDelegate <NSObject>
+
+-(void)deviceShouldTurnRight;
+
+-(void)deviceShouldTurnLeft;
+@end
 
 @interface CameraMian : UIViewController
 {
@@ -29,6 +35,7 @@
 }
 - (UIImage *)imageRotatedByDegrees:(UIImage*)image;
 @property (weak, nonatomic) IBOutlet UIView *switchView;
-
 @property (weak, nonatomic) IBOutlet UIView *previewView;
+
+@property (weak, nonatomic) id<deviceShouldRotationDelegate> deviceDelgate;
 @end
