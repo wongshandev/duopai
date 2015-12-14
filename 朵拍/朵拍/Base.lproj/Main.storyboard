@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DLg-Oi-fFd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DLg-Oi-fFd">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Drawer Controller-->
@@ -16,7 +15,6 @@
                     <view key="view" contentMode="scaleToFill" id="wDg-lS-RI0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -24,26 +22,24 @@
             </objects>
             <point key="canvasLocation" x="-6426" y="-2923"/>
         </scene>
-        <!--朵拍-->
+        <!--我爱拍-->
         <scene sceneID="aNn-P9-ly5">
             <objects>
                 <tableViewController storyboardIdentifier="HNBlessTableController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ka-Nm-Sc0" customClass="HNHomePageController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="DSp-Kl-gBS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="1ka-Nm-Sc0" id="pum-dm-TmE"/>
                             <outlet property="delegate" destination="1ka-Nm-Sc0" id="DfD-vv-6UZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="朵拍" id="pV1-IM-6dd">
+                    <navigationItem key="navigationItem" title="我爱拍" id="pV1-IM-6dd">
                         <barButtonItem key="leftBarButtonItem" id="RuB-hu-MPp">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YcT-Fz-Y2k">
                                 <rect key="frame" x="20" y="13" width="27" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
                                 <state key="normal" image="title_icon_list">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,7 +52,6 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fL8-td-gkf">
                                 <rect key="frame" x="530" y="7" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
                                 <state key="normal" title="进入">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,15 +67,14 @@
             </objects>
             <point key="canvasLocation" x="-4724" y="-2923"/>
         </scene>
-        <!--朵拍-->
+        <!--我爱拍-->
         <scene sceneID="DKz-GK-BSH">
             <objects>
                 <navigationController storyboardIdentifier="MyBlessNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bw3-SR-5dl" customClass="HNNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="朵拍" image="foot-nav1" id="xOf-HT-sUf"/>
+                    <tabBarItem key="tabBarItem" title="我爱拍" image="foot-nav1" id="xOf-HT-sUf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oyi-qc-6P3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="1ka-Nm-Sc0" kind="relationship" relationship="rootViewController" id="zzL-kO-4AU"/>

@@ -1,6 +1,6 @@
 //
 //  HNHomeTableCell.h
-//  朵拍
+//  我爱拍
 //
 //  Created by lilin on 15/12/6.
 //  Copyright © 2015年 lilin. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  HNPickerViewController.m
-//  朵拍
+//  我爱拍
 //
 //  Created by lilin on 15/12/5.
 //  Copyright © 2015年 lilin. All rights reserved.
@@ -49,7 +49,7 @@
         case HNPickerTypeCountTelControl:
             return @"倒数(遥控器)";
         default:
-            return @"朵拍";
+            return @"我爱拍";
     }
 }
 
@@ -64,7 +64,7 @@
         case HNPickerTypeCountTelControl:
             return KDPCountBackTeleControllerKey;
         default:
-            return @"朵拍";
+            return @"我爱拍";
     }
 }
 

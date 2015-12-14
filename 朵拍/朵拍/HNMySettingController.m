@@ -70,7 +70,7 @@ static NSString* baseCell = @"baseCell";
         case 5:
             return KDPExposeCompensationKey;
         default:
-            return @"朵拍";
+            return @"我爱拍";
     }
 }
 

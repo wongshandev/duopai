@@ -1,6 +1,6 @@
 //
 //  HNHomePageController.m
-//  朵拍
+//  我爱拍
 //
 //  Created by lilin on 15/12/5.
 //  Copyright © 2015年 lilin. All rights reserved.
@@ -44,14 +44,14 @@ NSMutableArray *peripheralsAD;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.scrollEnabled = NO;
     self.navigationController.toolbarHidden = NO;
-    UIBarButtonItem* item1 = [[UIBarButtonItem alloc] initWithTitle:@"打开" style:UIBarButtonItemStyleBordered target:self action:@selector(openDevice)];
-    UIBarButtonItem* item12 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem* item2 = [[UIBarButtonItem alloc] initWithTitle:@"左转" style:UIBarButtonItemStyleBordered target:self action:@selector(turnleftDevice)];
-    UIBarButtonItem* item23 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem* item3 = [[UIBarButtonItem alloc] initWithTitle:@"右转" style:UIBarButtonItemStyleBordered target:self action:@selector(turnRightDevice)];
-    UIBarButtonItem* item34 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem* item4 = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleBordered target:self action:@selector(closeDevice)];
-    self.toolbarItems = @[item1,item12,item2,item23,item3,item34,item4];
+//    UIBarButtonItem* item1 = [[UIBarButtonItem alloc] initWithTitle:@"打开" style:UIBarButtonItemStyleBordered target:self action:@selector(openDevice)];
+//    UIBarButtonItem* item12 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+//    UIBarButtonItem* item2 = [[UIBarButtonItem alloc] initWithTitle:@"左转" style:UIBarButtonItemStyleBordered target:self action:@selector(turnleftDevice)];
+//    UIBarButtonItem* item23 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+//    UIBarButtonItem* item3 = [[UIBarButtonItem alloc] initWithTitle:@"右转" style:UIBarButtonItemStyleBordered target:self action:@selector(turnRightDevice)];
+//    UIBarButtonItem* item34 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+//    UIBarButtonItem* item4 = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleBordered target:self action:@selector(closeDevice)];
+//    self.toolbarItems = @[item1,item12,item2,item23,item3,item34,item4];
 }
 
 -(void)openDevice{

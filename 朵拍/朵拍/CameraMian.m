@@ -1,6 +1,6 @@
 //
 //  CameraMian.m
-//  朵拍
+//  我爱拍
 //
 //  Created by Huang Shan on 15/12/6.
 //  Copyright © 2015年 lilin. All rights reserved.
