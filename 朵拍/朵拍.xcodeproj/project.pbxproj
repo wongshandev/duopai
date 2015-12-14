@@ -14,9 +14,7 @@
 		A7BAB51A1C146642000FF9ED /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB5191C146642000FF9ED /* CoreBluetooth.framework */; };
 		A7BAB51C1C146650000FF9ED /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB51B1C146650000FF9ED /* CoreTelephony.framework */; };
 		A7BAB51E1C14665A000FF9ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB51D1C14665A000FF9ED /* CoreGraphics.framework */; };
-		A7BAB5201C146664000FF9ED /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB51F1C146664000FF9ED /* CoreAudioKit.framework */; };
-		A7BAB5251C1472B9000FF9ED /* CameraMian.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BAB5231C1472B9000FF9ED /* CameraMian.m */; };
-		A7BAB5261C1472BA000FF9ED /* CameraMian.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BAB5241C1472B9000FF9ED /* CameraMian.xib */; };
+		A7BAB5201C146664000FF9ED /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB51F1C146664000FF9ED /* CoreAudioKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7BAB5281C1473D3000FF9ED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB5271C1473D3000FF9ED /* AVFoundation.framework */; };
 		A7BAB52A1C1473DF000FF9ED /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB5291C1473DF000FF9ED /* ImageIO.framework */; };
 		A7BAB52C1C1473EB000FF9ED /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB52B1C1473EB000FF9ED /* CoreImage.framework */; };
@@ -74,6 +72,8 @@
 		F27D8CC61C035E1C00012592 /* HNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D8CC31C035E1C00012592 /* HNTabBarController.m */; };
 		F27D8CC71C035E1C00012592 /* HNTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D8CC51C035E1C00012592 /* HNTabBar.m */; };
 		F27D8CCA1C035E5800012592 /* UIScrollView+Parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D8CC91C035E5800012592 /* UIScrollView+Parallax.m */; };
+		F2B1FF7F1C1DB6C600DC19F8 /* CameraMian.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */; };
+		F2B1FF801C1DB6C600DC19F8 /* CameraMian.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,9 +86,6 @@
 		A7BAB51B1C146650000FF9ED /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A7BAB51D1C14665A000FF9ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A7BAB51F1C146664000FF9ED /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
-		A7BAB5221C1472B9000FF9ED /* CameraMian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraMian.h; sourceTree = "<group>"; };
-		A7BAB5231C1472B9000FF9ED /* CameraMian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraMian.m; sourceTree = "<group>"; };
-		A7BAB5241C1472B9000FF9ED /* CameraMian.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraMian.xib; sourceTree = "<group>"; };
 		A7BAB5271C1473D3000FF9ED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A7BAB5291C1473DF000FF9ED /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A7BAB52B1C1473EB000FF9ED /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -191,6 +188,9 @@
 		F27D8CC51C035E1C00012592 /* HNTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNTabBar.m; sourceTree = "<group>"; };
 		F27D8CC81C035E5800012592 /* UIScrollView+Parallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Parallax.h"; sourceTree = "<group>"; };
 		F27D8CC91C035E5800012592 /* UIScrollView+Parallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Parallax.m"; sourceTree = "<group>"; };
+		F2B1FF7C1C1DB6C600DC19F8 /* CameraMian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraMian.h; sourceTree = "<group>"; };
+		F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraMian.m; sourceTree = "<group>"; };
+		F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraMian.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,9 +237,9 @@
 			children = (
 				A7BAB5311C1474AA000FF9ED /* DetectFace.h */,
 				A7BAB5321C1474AA000FF9ED /* DetectFace.m */,
-				A7BAB5221C1472B9000FF9ED /* CameraMian.h */,
-				A7BAB5231C1472B9000FF9ED /* CameraMian.m */,
-				A7BAB5241C1472B9000FF9ED /* CameraMian.xib */,
+				F2B1FF7C1C1DB6C600DC19F8 /* CameraMian.h */,
+				F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */,
+				F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -520,7 +520,7 @@
 				TargetAttributes = {
 					F27D8C7C1C03477E00012592 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4J7549764U;
+						DevelopmentTeam = 77BN3AW3ZP;
 					};
 				};
 			};
@@ -561,7 +561,7 @@
 				A7BAB5161C14628B000FF9ED /* Default-568h@2x.png in Resources */,
 				F23944D51C14075A00C0458F /* JKImagePickerController.strings in Resources */,
 				F23944D61C14075A00C0458F /* ImagesPicker.xcassets in Resources */,
-				A7BAB5261C1472BA000FF9ED /* CameraMian.xib in Resources */,
+				F2B1FF801C1DB6C600DC19F8 /* CameraMian.xib in Resources */,
 				F23944ED1C1418C400C0458F /* HNHomeTableCell.xib in Resources */,
 				A7BAB5181C14628B000FF9ED /* icon@2x.png in Resources */,
 			);
@@ -640,10 +640,10 @@
 				F23944E31C14075A00C0458F /* UIView+JKPicker.m in Sources */,
 				F27D8CB71C035D3900012592 /* UIColor+utils.m in Sources */,
 				F27D8C851C03477E00012592 /* AppDelegate.m in Sources */,
+				F2B1FF7F1C1DB6C600DC19F8 /* CameraMian.m in Sources */,
 				F27D8CA61C035BA700012592 /* HNLeftSideDrawerController.m in Sources */,
 				F23944F61C142EBF00C0458F /* SCTouchDetector.m in Sources */,
 				F23944F11C142C0700C0458F /* HNRecordViewController.m in Sources */,
-				A7BAB5251C1472B9000FF9ED /* CameraMian.m in Sources */,
 				F27D8CB31C035CA200012592 /* HNDrawerViewController.m in Sources */,
 				F23944F91C14309900C0458F /* SCRecordSessionManager.m in Sources */,
 				F23944DB1C14075A00C0458F /* JKAssetsThumbnailView.m in Sources */,
@@ -714,7 +714,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -736,6 +737,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "776bef47-4b09-4a22-824c-2c04ba66cb1f";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -757,7 +759,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -772,6 +775,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "776bef47-4b09-4a22-824c-2c04ba66cb1f";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -784,12 +788,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/朵拍/duopai-Prefix.pch";
 				INFOPLIST_FILE = "朵拍/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agpc-smart.duopai";
 				PRODUCT_NAME = duopai;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -799,14 +805,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Lingbao Electronics Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/朵拍/duopai-Prefix.pch";
 				INFOPLIST_FILE = "朵拍/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agpc-smart.duopai";
 				PRODUCT_NAME = duopai;
-				PROVISIONING_PROFILE = "d8a2aaa9-ae6d-4e5c-b6be-0f9394a626fc";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

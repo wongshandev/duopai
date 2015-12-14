@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F27D8C7C1C03477E00012592"
-               BuildableName = "duopai.app"
-               BlueprintName = "&#x6735;&#x62cd;"
-               ReferencedContainer = "container:&#x6735;&#x62cd;.xcodeproj">
+               BlueprintIdentifier = "9775596B3CA16905FC8F66DA8E2A3C67"
+               BuildableName = "libDACircularProgress.a"
+               BlueprintName = "DACircularProgress"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F27D8C7C1C03477E00012592"
-            BuildableName = "duopai.app"
-            BlueprintName = "&#x6735;&#x62cd;"
-            ReferencedContainer = "container:&#x6735;&#x62cd;.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,23 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F27D8C7C1C03477E00012592"
-            BuildableName = "duopai.app"
-            BlueprintName = "&#x6735;&#x62cd;"
-            ReferencedContainer = "container:&#x6735;&#x62cd;.xcodeproj">
+            BlueprintIdentifier = "9775596B3CA16905FC8F66DA8E2A3C67"
+            BuildableName = "libDACircularProgress.a"
+            BlueprintName = "DACircularProgress"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -77,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F27D8C7C1C03477E00012592"
-            BuildableName = "duopai.app"
-            BlueprintName = "&#x6735;&#x62cd;"
-            ReferencedContainer = "container:&#x6735;&#x62cd;.xcodeproj">
+            BlueprintIdentifier = "9775596B3CA16905FC8F66DA8E2A3C67"
+            BuildableName = "libDACircularProgress.a"
+            BlueprintName = "DACircularProgress"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -145,14 +145,16 @@ static int count_move[3] = {0};
                 if ((count_move[2]>count_move[1])&&(count_move[1]>count_move[0]))
                 {
                     NSLog(@"向右转 ");
-                    HNHomePageController *vc = [[HNHomePageController alloc]init];
-                    [vc BleControlTurnRight];
+                    if (self.deviceDelgate&&[self.deviceDelgate respondsToSelector:@selector(deviceShouldTurnRight)]) {
+                        [self.deviceDelgate deviceShouldTurnRight];
+                    }
                 }
                 else if ((count_move[2]<count_move[1])&&(count_move[1]<count_move[0]))
                 {
                     NSLog(@"向左转 ");
-                    HNHomePageController *vc = [[HNHomePageController alloc]init];
-                    [vc BleControlTurnLeft];
+                    if (self.deviceDelgate&&[self.deviceDelgate respondsToSelector:@selector(deviceShouldTurnLeft)]) {
+                        [self.deviceDelgate deviceShouldTurnLeft];
+                    }
                 }
 
             }

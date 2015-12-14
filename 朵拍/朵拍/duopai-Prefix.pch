@@ -13,7 +13,7 @@ typedef void (^MSBaseCompleteBlock)();
 
 #ifdef __OBJC__
     #import <SVProgressHUD/SVProgressHUD.h>
-
+#import <BabyBluetooth/BabyBluetooth.h>
 //    #import <TSMessages/TSMessage.h>
     #import <JDStatusBarNotification/JDStatusBarNotification.h>
 //    #import <UMengAnalytics/MobClick.h>
