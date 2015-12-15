@@ -56,26 +56,20 @@
 #pragma mark - 旋转代理
 -(BOOL)shouldAutorotate
 {
-    return YES;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return [self.visibleViewController shouldAutorotate];
 
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        return [self.visibleViewController shouldAutorotate];
-//
-//    }else{
-//        return NO;
-//    }
+    }else{
+        return [self.visibleViewController shouldAutorotate];
+    }
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskAllButUpsideDown;
-
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        return UIInterfaceOrientationMaskAllButUpsideDown;
-//    }else{
-////        return UIInterfaceOrientationMaskAllButUpsideDown;
-////        return UIInterfaceOrientationMaskPortrait;
-//        return [self.visibleViewController supportedInterfaceOrientations];
-//    }
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }else{
+        return [self.visibleViewController supportedInterfaceOrientations];
+    }
 }
 @end

@@ -10,6 +10,8 @@
 #import "HNRecordViewController.h"
 #import "HNHomeTableCell.h"
 #import "CameraMian.h"
+#import "HNCameraController.h"
+
 #import "BabyBluetooth.h"
 
 #define channelOnPeropheralView nil
@@ -25,7 +27,7 @@ short int sendSerialNumber = 0;
 #endif
 
 
-@interface HNHomePageController ()<deviceShouldRotationDelegate>{
+@interface HNHomePageController ()<HNDeviceShouldRotationDelegate>{
 //    UITableView *tableView;
 NSMutableArray *peripherals;
 NSMutableArray *peripheralsAD;
@@ -39,6 +41,7 @@ NSMutableArray *peripheralsAD;
 -(void)dealloc{
     NSLog(@"dealloc  HNHomePageController");
 }
+
 -(void)initTableView{
     [self.tableView registerNib:[UINib nibWithNibName:@"HNHomeTableCell" bundle:nil] forCellReuseIdentifier:@"homeCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -134,7 +137,11 @@ NSMutableArray *peripheralsAD;
 }
 - (IBAction)onRecordButtonClicked:(UIButton *)sender {
 #ifdef __HS_CAMERA__
-    CameraMian * vc = [[CameraMian alloc] initWithNibName:@"CameraMian" bundle:nil];
+//    CameraMian * vc = [[CameraMian alloc] initWithNibName:@"CameraMian" bundle:nil];
+//    vc.deviceDelgate = self;
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    HNCameraController * vc = [[HNCameraController alloc] initWithNibName:@"HNCameraController" bundle:nil];
     vc.deviceDelgate = self;
     [self.navigationController pushViewController:vc animated:YES];
 #else
@@ -344,4 +351,8 @@ NSMutableArray *peripheralsAD;
 
 
 #endif
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
 @end

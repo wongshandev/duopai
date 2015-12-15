@@ -34,8 +34,7 @@
     CGRect realfaceRect;
 }
 - (UIImage *)imageRotatedByDegrees:(UIImage*)image;
-@property (weak, nonatomic) IBOutlet UIView *switchView;
-@property (weak, nonatomic) IBOutlet UIView *previewView;
+@property (strong, nonatomic) IBOutlet UIView *previewView;
 
 @property (weak, nonatomic) id<deviceShouldRotationDelegate> deviceDelgate;
 @end

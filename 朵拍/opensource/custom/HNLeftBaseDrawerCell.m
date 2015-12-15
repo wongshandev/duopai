@@ -23,11 +23,11 @@
     [self.titleLabel setHighlightedTextColor:[UIColor lightGrayColor]];
     [self.accessoryView setTintColor:[UIColor whiteColor]];
     
-    self.badgeString = @"8";
-    self.badgeColor = [UIColor redColor];
-    self.badgeTextColor = [UIColor whiteColor];
-    self.badgeColorHighlighted = [UIColor redColor];
-    self.badgeTextColorHighlighted = [UIColor whiteColor];
+//    self.badgeString = @"8";
+//    self.badgeColor = [UIColor redColor];
+//    self.badgeTextColor = [UIColor whiteColor];
+//    self.badgeColorHighlighted = [UIColor redColor];
+//    self.badgeTextColorHighlighted = [UIColor whiteColor];
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

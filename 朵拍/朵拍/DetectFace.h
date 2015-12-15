@@ -16,6 +16,7 @@
     AVCaptureVideoDataOutput *videoDataOutput;
     dispatch_queue_t videoDataOutputQueue;
     AVCaptureSession *session;
+    UIImageOrientation g_orientation;
     @public
     AVCaptureStillImageOutput * stillImageOutput;
     
@@ -30,9 +31,11 @@
 
 @property (nonatomic, strong) UIView *previewView;
 
+// 视频预览框
+@property (nonatomic, strong) AVCaptureVideoPreviewLayer * previewLayer;
 - (void)startDetection;
 - (void)stopDetection;
-
+- (void)changePreviewOrientation:(UIInterfaceOrientation)interfaceOrientation;
 - (void) saveImage: (UIImage*)image;
 - (UIImage*)loadImage;
 
