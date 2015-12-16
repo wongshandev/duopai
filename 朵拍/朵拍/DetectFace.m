@@ -15,8 +15,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 
 @interface DetectFace () <AVCaptureVideoDataOutputSampleBufferDelegate>
 
-// 视频预览框
-@property (nonatomic, strong) AVCaptureVideoPreviewLayer * previewLayer;
+
 // 人脸检测
 @property (nonatomic, strong) CIDetector * faceDetector;
 
@@ -70,8 +69,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
             }
         }
         NSLog(@"下面的%d",isFront);
-    }
-    else {
+    } else {
         // 提示框
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
                                                         message:@"该设备没有前视摄像头."
@@ -126,7 +124,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 	
 	self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
 	[self.previewLayer setBackgroundColor:[[UIColor blackColor] CGColor]];
-	[self.previewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
+	[self.previewLayer setVideoGravity:AVLayerVideoGravityResize];
 	CALayer *rootLayer = [self.previewView layer];
 	[rootLayer setMasksToBounds:YES];
 	[self.previewLayer setFrame:[rootLayer bounds]];
@@ -134,6 +132,11 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 	[session startRunning];
 }
 
+
+-(void)setPreviewView:(UIView *)previewView{
+    _previewView = previewView;
+    [self.previewLayer setFrame:[previewView bounds]];
+}
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
@@ -178,8 +181,15 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
         NSString *gravity = [self.previewLayer videoGravity];
         
         CGRect previewBox = [DetectFace videoPreviewBoxForGravity:gravity frameSize:parentFrameSize apertureSize:clap.size];
-		if([self.delegate respondsToSelector:@selector(detectedFaceController:features:forVideoBox:withPreviewBox:)])
-            [self.delegate detectedFaceController:self features:features forVideoBox:clap withPreviewBox:previewBox];
+        UIDeviceOrientation orientation =[[UIDevice currentDevice] orientation];
+        if (UIDeviceOrientationIsLandscape(orientation)) {
+            if([self.delegate respondsToSelector:@selector(detectedFaceController:features:forVideoBox:withPreviewBox:)])
+                [self.delegate detectedFaceController:self features:features forVideoBox:clap withPreviewBox:previewBox];
+        }else{
+            if([self.delegate respondsToSelector:@selector(detectedFaceController:features:forVideoBox:withPreviewBox:)])
+                [self.delegate detectedFaceController:self features:features forVideoBox:clap withPreviewBox:previewBox];
+        }
+
 	});
 }
 
@@ -194,6 +204,30 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 - (void)stopDetection
 {
     [self teardownAVCapture];
+}
+
+- (void)changePreviewOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if (!self.previewLayer) {
+        return;
+    }
+    [CATransaction begin];
+    if (interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        g_orientation = UIImageOrientationUp;
+        self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
+    }else if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft){
+        g_orientation = UIImageOrientationDown;
+        self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
+    }else if (interfaceOrientation == UIDeviceOrientationPortrait){
+        g_orientation = UIImageOrientationRight;
+        self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortrait;
+    }else if (interfaceOrientation == UIDeviceOrientationPortraitUpsideDown){
+        g_orientation = UIImageOrientationLeft;
+        self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
+    }
+    _previewLayer.frame = self.previewLayer.superlayer.bounds;
+    [CATransaction commit];
+    
 }
 
 // clean up capture setup

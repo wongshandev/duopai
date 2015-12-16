@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HNCameraController">
+            <connections>
+                <outlet property="facedetect" destination="E7w-mu-EHo" id="nPK-jc-5cn"/>
+                <outlet property="segment" destination="p7b-Bm-TEe" id="vh3-or-yfX"/>
+                <outlet property="view" destination="EFn-gv-q1W" id="fOj-5K-LD3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EFn-gv-q1W">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIS-p0-XAy">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ZMC-8H-sf8"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" id="p7b-Bm-TEe">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="2aY-t8-ywY">
+                                <rect key="frame" x="20" y="7" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Front"/>
+                                    <segment title="Back"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchCameras:" destination="-1" eventType="valueChanged" id="k4M-7m-POo"/>
+                                </connections>
+                            </segmentedControl>
+                            <connections>
+                                <action selector="switchCameras:" destination="-1" id="MZH-Pp-jyj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GaM-s3-YKc"/>
+                        <barButtonItem title="人脸检测" style="plain" id="6iC-dr-8UR"/>
+                        <barButtonItem style="plain" id="laT-sn-d4z">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="E7w-mu-EHo">
+                                <rect key="frame" x="313" y="7" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="toggleFaceDetection:" destination="-1" eventType="valueChanged" id="Yf8-Vh-YAu"/>
+                                </connections>
+                            </switch>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Qi3-FY-KQf"/>
+                        <barButtonItem title="拍一张" id="03G-wP-34R">
+                            <connections>
+                                <action selector="snap:" destination="-1" id="yVi-PF-zwb"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wIS-p0-XAy" secondAttribute="trailing" id="Ij8-Np-7o9"/>
+                <constraint firstItem="wIS-p0-XAy" firstAttribute="leading" secondItem="EFn-gv-q1W" secondAttribute="leading" id="jAF-Mm-Niu"/>
+                <constraint firstAttribute="bottom" secondItem="wIS-p0-XAy" secondAttribute="bottom" id="jAa-Ex-fwt"/>
+            </constraints>
+            <point key="canvasLocation" x="318" y="304"/>
+        </view>
+    </objects>
+</document>

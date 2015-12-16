@@ -73,6 +73,10 @@
 		F27D8CCA1C035E5800012592 /* UIScrollView+Parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D8CC91C035E5800012592 /* UIScrollView+Parallax.m */; };
 		F2B1FF7F1C1DB6C600DC19F8 /* CameraMian.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */; };
 		F2B1FF801C1DB6C600DC19F8 /* CameraMian.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */; };
+		F6E079961C1FED8400DD2252 /* CameraImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E079951C1FED8400DD2252 /* CameraImageHelper.m */; };
+		F6E0799C1C1FFE1700DD2252 /* HNCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E0799A1C1FFE1700DD2252 /* HNCameraController.m */; };
+		F6E0799D1C1FFE1700DD2252 /* HNCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E0799B1C1FFE1700DD2252 /* HNCameraController.xib */; };
+		F6E079A01C20024800DD2252 /* UIImage+RotationMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E0799F1C20024800DD2252 /* UIImage+RotationMethods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +193,13 @@
 		F2B1FF7C1C1DB6C600DC19F8 /* CameraMian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraMian.h; sourceTree = "<group>"; };
 		F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraMian.m; sourceTree = "<group>"; };
 		F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraMian.xib; sourceTree = "<group>"; };
+		F6E079941C1FED8400DD2252 /* CameraImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraImageHelper.h; sourceTree = "<group>"; };
+		F6E079951C1FED8400DD2252 /* CameraImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraImageHelper.m; sourceTree = "<group>"; };
+		F6E079991C1FFE1700DD2252 /* HNCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCameraController.h; sourceTree = "<group>"; };
+		F6E0799A1C1FFE1700DD2252 /* HNCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCameraController.m; sourceTree = "<group>"; };
+		F6E0799B1C1FFE1700DD2252 /* HNCameraController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HNCameraController.xib; sourceTree = "<group>"; };
+		F6E0799E1C20024800DD2252 /* UIImage+RotationMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RotationMethods.h"; sourceTree = "<group>"; };
+		F6E0799F1C20024800DD2252 /* UIImage+RotationMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RotationMethods.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +248,13 @@
 				F2B1FF7C1C1DB6C600DC19F8 /* CameraMian.h */,
 				F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */,
 				F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */,
+				F6E0799E1C20024800DD2252 /* UIImage+RotationMethods.h */,
+				F6E0799F1C20024800DD2252 /* UIImage+RotationMethods.m */,
+				F6E079991C1FFE1700DD2252 /* HNCameraController.h */,
+				F6E0799A1C1FFE1700DD2252 /* HNCameraController.m */,
+				F6E0799B1C1FFE1700DD2252 /* HNCameraController.xib */,
+				F6E079941C1FED8400DD2252 /* CameraImageHelper.h */,
+				F6E079951C1FED8400DD2252 /* CameraImageHelper.m */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -547,6 +565,7 @@
 			files = (
 				F27D8C901C03477E00012592 /* LaunchScreen.storyboard in Resources */,
 				F23944A91C12AE7C00C0458F /* HNSettingBaseCell.xib in Resources */,
+				F6E0799D1C1FFE1700DD2252 /* HNCameraController.xib in Resources */,
 				F23944AB1C12AE7C00C0458F /* HNMySettingController.xib in Resources */,
 				F23944AD1C12AE7C00C0458F /* HNProfileHeaderView.xib in Resources */,
 				F23944F31C142C5700C0458F /* HNRecordViewController.xib in Resources */,
@@ -620,6 +639,7 @@
 			files = (
 				F27D8CCA1C035E5800012592 /* UIScrollView+Parallax.m in Sources */,
 				F23944AA1C12AE7C00C0458F /* HNMySettingController.m in Sources */,
+				F6E079961C1FED8400DD2252 /* CameraImageHelper.m in Sources */,
 				F23944DD1C14075A00C0458F /* JKImagePickerController.m in Sources */,
 				F27D8CC01C035D8500012592 /* HNViewController.m in Sources */,
 				F23944DF1C14075A00C0458F /* JKPhotoBrowserCell.m in Sources */,
@@ -641,10 +661,12 @@
 				F23944F61C142EBF00C0458F /* SCTouchDetector.m in Sources */,
 				F23944F11C142C0700C0458F /* HNRecordViewController.m in Sources */,
 				F27D8CB31C035CA200012592 /* HNDrawerViewController.m in Sources */,
+				F6E079A01C20024800DD2252 /* UIImage+RotationMethods.m in Sources */,
 				F23944F91C14309900C0458F /* SCRecordSessionManager.m in Sources */,
 				F23944DB1C14075A00C0458F /* JKAssetsThumbnailView.m in Sources */,
 				F23944D91C14075A00C0458F /* JKAssetsGroupCell.m in Sources */,
 				F27D8CA31C035BA700012592 /* HNDrawerVisualStateManager.m in Sources */,
+				F6E0799C1C1FFE1700DD2252 /* HNCameraController.m in Sources */,
 				F23944E21C14075A00C0458F /* PhotoAlbumManager.m in Sources */,
 				A7BAB5331C1474AA000FF9ED /* DetectFace.m in Sources */,
 				F23944B31C131C0C00C0458F /* HNFileManager.m in Sources */,
