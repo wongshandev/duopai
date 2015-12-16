@@ -126,7 +126,7 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     NSError *error = nil;
     
     AVCaptureSession *session = [AVCaptureSession new];
-    [session setSessionPreset:AVCaptureSessionPresetHigh];
+    [session setSessionPreset:AVCaptureSessionPreset640x480];
 
     
     // Select a video device, make an input
