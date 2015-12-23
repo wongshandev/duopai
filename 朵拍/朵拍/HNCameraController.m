@@ -198,8 +198,8 @@ bail:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    canSnaped = YES;
     self.previewView = [[UIView alloc] init];
-    self.previewView.backgroundColor = [UIColor greenSeaColor];
     [self.view addSubview:self.previewView];
     [self.previewView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide);
@@ -523,7 +523,12 @@ bail:
         CGFloat unionCenterX =  UIDeviceOrientationIsLandscape(orientation) ? screenWidth - CGRectGetMidY(unionRect): CGRectGetMidX(unionRect);
     
         if (fabs(screenWidth/2. - unionCenterX) <= 10) {
-            NSLog(@"我很好");
+            if (canSnaped) {
+               [self snap:nil];
+                canSnaped = NO;
+                [self performSelector:@selector(setCanSnape) withObject:nil afterDelay:3];
+            }
+            
             return;
         }
         
@@ -539,6 +544,10 @@ bail:
         }
     }
     
+}
+
+-(void)setCanSnape{
+    canSnaped = YES;
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection

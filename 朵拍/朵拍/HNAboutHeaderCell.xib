@@ -7,35 +7,35 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="HNHomeTableCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="OU1-8y-def" customClass="HNAboutHeaderCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OU1-8y-def" id="fXf-jH-gmS">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-Gc-OvO">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pm6-dy-jmo">
                         <rect key="frame" x="100" y="40" width="120" height="120"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hj7-MD-AIt">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1k3-dt-J3c">
                                 <rect key="frame" x="2" y="2" width="116" height="116"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我爱拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2n-cg-0Fv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我爱拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-HV-OtP">
                                         <rect key="frame" x="0.0" y="89" width="116" height="21"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="kHr-p4-ke1"/>
+                                            <constraint firstAttribute="height" constant="21" id="Ugr-Il-d8u"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="RTe-Y8-WpQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="75I-OG-RBn">
                                         <rect key="frame" x="28" y="20" width="60" height="60"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="GTI-gF-ErB"/>
-                                            <constraint firstAttribute="width" constant="60" id="NEZ-LN-IsR"/>
+                                            <constraint firstAttribute="height" constant="60" id="Wp6-nO-fdS"/>
+                                            <constraint firstAttribute="width" constant="60" id="pxL-Oz-k2O"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksTBounds" value="YES"/>
@@ -48,11 +48,11 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.45882352939999999" green="0.81176470590000005" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="a2n-cg-0Fv" secondAttribute="trailing" id="2Jx-h6-qYW"/>
-                                    <constraint firstItem="RTe-Y8-WpQ" firstAttribute="top" secondItem="Hj7-MD-AIt" secondAttribute="top" constant="20" id="9Kc-Hn-jsj"/>
-                                    <constraint firstItem="a2n-cg-0Fv" firstAttribute="leading" secondItem="Hj7-MD-AIt" secondAttribute="leading" id="nDS-cF-gx7"/>
-                                    <constraint firstAttribute="bottom" secondItem="a2n-cg-0Fv" secondAttribute="bottom" constant="6" id="sAm-W5-cko"/>
-                                    <constraint firstItem="RTe-Y8-WpQ" firstAttribute="centerX" secondItem="Hj7-MD-AIt" secondAttribute="centerX" id="zUb-WF-tJU"/>
+                                    <constraint firstItem="1SV-HV-OtP" firstAttribute="leading" secondItem="1k3-dt-J3c" secondAttribute="leading" id="19P-FL-8FL"/>
+                                    <constraint firstItem="75I-OG-RBn" firstAttribute="top" secondItem="1k3-dt-J3c" secondAttribute="top" constant="20" id="41K-Be-DRs"/>
+                                    <constraint firstItem="75I-OG-RBn" firstAttribute="centerX" secondItem="1k3-dt-J3c" secondAttribute="centerX" id="4hq-22-2RK"/>
+                                    <constraint firstAttribute="bottom" secondItem="1SV-HV-OtP" secondAttribute="bottom" constant="6" id="YEk-ph-sAK"/>
+                                    <constraint firstAttribute="trailing" secondItem="1SV-HV-OtP" secondAttribute="trailing" id="gU1-Eb-6RQ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksTpBounds" value="YES"/>
@@ -64,12 +64,12 @@
                         </subviews>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="120" id="LSA-td-pSZ"/>
-                            <constraint firstItem="Hj7-MD-AIt" firstAttribute="top" secondItem="9dg-Gc-OvO" secondAttribute="top" constant="2" id="QMI-Xb-icW"/>
-                            <constraint firstAttribute="width" constant="120" id="V42-s7-DRj"/>
-                            <constraint firstItem="Hj7-MD-AIt" firstAttribute="leading" secondItem="9dg-Gc-OvO" secondAttribute="leading" constant="2" id="WnM-QG-CIV"/>
-                            <constraint firstAttribute="trailing" secondItem="Hj7-MD-AIt" secondAttribute="trailing" constant="2" id="ggj-vP-CGH"/>
-                            <constraint firstAttribute="bottom" secondItem="Hj7-MD-AIt" secondAttribute="bottom" constant="2" id="oqL-i2-DBT"/>
+                            <constraint firstItem="1k3-dt-J3c" firstAttribute="top" secondItem="Pm6-dy-jmo" secondAttribute="top" constant="2" id="0IU-jV-Rj8"/>
+                            <constraint firstAttribute="trailing" secondItem="1k3-dt-J3c" secondAttribute="trailing" constant="2" id="MCL-Qa-C5y"/>
+                            <constraint firstAttribute="width" constant="120" id="chG-AJ-LSl"/>
+                            <constraint firstAttribute="bottom" secondItem="1k3-dt-J3c" secondAttribute="bottom" constant="2" id="lqq-Dg-Zxz"/>
+                            <constraint firstItem="1k3-dt-J3c" firstAttribute="leading" secondItem="Pm6-dy-jmo" secondAttribute="leading" constant="2" id="njp-xm-clB"/>
+                            <constraint firstAttribute="height" constant="120" id="tt8-kF-oNv"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -84,16 +84,11 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="9dg-Gc-OvO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KuB-MZ-HP7"/>
-                    <constraint firstItem="9dg-Gc-OvO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="RFy-UV-GKk"/>
+                    <constraint firstItem="Pm6-dy-jmo" firstAttribute="centerY" secondItem="fXf-jH-gmS" secondAttribute="centerY" id="3nK-CS-Jlh"/>
+                    <constraint firstItem="Pm6-dy-jmo" firstAttribute="centerX" secondItem="fXf-jH-gmS" secondAttribute="centerX" id="el5-fi-J0o"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
-            <connections>
-                <outlet property="connectStatusImageView" destination="RTe-Y8-WpQ" id="sCj-uL-RrX"/>
-                <outlet property="connectStatusLabel" destination="a2n-cg-0Fv" id="TgX-kA-bhN"/>
-                <outlet property="parentView" destination="9dg-Gc-OvO" id="3e4-HQ-V0x"/>
-            </connections>
             <point key="canvasLocation" x="372" y="257"/>
         </tableViewCell>
     </objects>

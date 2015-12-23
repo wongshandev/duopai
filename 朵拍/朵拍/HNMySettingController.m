@@ -47,6 +47,8 @@ static NSString* baseCell = @"baseCell";
     //[TSMessage setDefaultViewController:self];
 }
 
+
+
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return @"通用";
 }
@@ -108,22 +110,22 @@ static NSString* baseCell = @"baseCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
         HNPickerViewController* picker = [HNPickerViewController pickerWithPickeType:HNPickerTypePhoto pickList:@[@"高",@"中",@"低"] completeBlock:^(NSString *pickerString) {
-            
+            [self.tableView reloadData];
         }];
         [self.navigationController pushViewController:picker animated:YES];
     }else if (indexPath.row == 1){
         HNPickerViewController* picker = [HNPickerViewController pickerWithPickeType:HNPickerTypeVideo pickList:@[@"高",@"中",@"低"] completeBlock:^(NSString *pickerString) {
-            
+             [self.tableView reloadData];
         }];
         [self.navigationController pushViewController:picker animated:YES];
     }else if (indexPath.row == 2){
         HNPickerViewController* picker = [HNPickerViewController pickerWithPickeType:HNPickerTypeCountFace pickList:@[@"快(2秒)",@"普通(3秒)",@"慢(5秒)"] completeBlock:^(NSString *pickerString) {
-            
+             [self.tableView reloadData];
         }];
         [self.navigationController pushViewController:picker animated:YES];
     }else if (indexPath.row == 3){
         HNPickerViewController* picker = [HNPickerViewController pickerWithPickeType:HNPickerTypeCountTelControl pickList:@[@"立即",@"1秒",@"2秒",@"3秒",@"4秒",@"5秒"] completeBlock:^(NSString *pickerString) {
-            
+             [self.tableView reloadData];
         }];
         [self.navigationController pushViewController:picker animated:YES];
     }
