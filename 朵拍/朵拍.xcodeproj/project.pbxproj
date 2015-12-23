@@ -918,7 +918,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
 				PRODUCT_NAME = duopai;
-				PROVISIONING_PROFILE = "179e9215-047c-4393-9f85-840f1dcb1a8e";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -936,7 +936,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
 				PRODUCT_NAME = duopai;
-				PROVISIONING_PROFILE = "179e9215-047c-4393-9f85-840f1dcb1a8e";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
