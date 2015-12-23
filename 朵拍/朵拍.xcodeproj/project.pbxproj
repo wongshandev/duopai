@@ -73,6 +73,10 @@
 		F27D8CCA1C035E5800012592 /* UIScrollView+Parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D8CC91C035E5800012592 /* UIScrollView+Parallax.m */; };
 		F2B1FF7F1C1DB6C600DC19F8 /* CameraMian.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */; };
 		F2B1FF801C1DB6C600DC19F8 /* CameraMian.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */; };
+		F2CF46B61C2ADC750076E048 /* 倒计数声音.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2CF46B41C2ADC750076E048 /* 倒计数声音.wav */; };
+		F2CF46B71C2ADC750076E048 /* 咔嚓声音.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2CF46B51C2ADC750076E048 /* 咔嚓声音.wav */; };
+		F2CF46B91C2ADC890076E048 /* copyright.html in Resources */ = {isa = PBXBuildFile; fileRef = F2CF46B81C2ADC890076E048 /* copyright.html */; };
+		F2CF46BB1C2ADC940076E048 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2CF46BA1C2ADC940076E048 /* icon.png */; };
 		F66EBE121C27F9D70037416F /* HNAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE101C27F9D70037416F /* HNAboutViewController.m */; };
 		F66EBE171C27FAF00037416F /* HNAboutHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE151C27FAF00037416F /* HNAboutHeaderCell.m */; };
 		F66EBE181C27FAF00037416F /* HNAboutHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66EBE161C27FAF00037416F /* HNAboutHeaderCell.xib */; };
@@ -203,6 +207,10 @@
 		F2B1FF7C1C1DB6C600DC19F8 /* CameraMian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraMian.h; sourceTree = "<group>"; };
 		F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraMian.m; sourceTree = "<group>"; };
 		F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraMian.xib; sourceTree = "<group>"; };
+		F2CF46B41C2ADC750076E048 /* 倒计数声音.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "倒计数声音.wav"; sourceTree = "<group>"; };
+		F2CF46B51C2ADC750076E048 /* 咔嚓声音.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "咔嚓声音.wav"; sourceTree = "<group>"; };
+		F2CF46B81C2ADC890076E048 /* copyright.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = copyright.html; sourceTree = "<group>"; };
+		F2CF46BA1C2ADC940076E048 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		F66EBE0F1C27F9D70037416F /* HNAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAboutViewController.h; sourceTree = "<group>"; };
 		F66EBE101C27F9D70037416F /* HNAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAboutViewController.m; sourceTree = "<group>"; };
 		F66EBE141C27FAF00037416F /* HNAboutHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAboutHeaderCell.h; sourceTree = "<group>"; };
@@ -443,6 +451,10 @@
 		F27D8C801C03477E00012592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F2CF46BA1C2ADC940076E048 /* icon.png */,
+				F2CF46B81C2ADC890076E048 /* copyright.html */,
+				F2CF46B41C2ADC750076E048 /* 倒计数声音.wav */,
+				F2CF46B51C2ADC750076E048 /* 咔嚓声音.wav */,
 				F27D8C811C03477E00012592 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -605,7 +617,7 @@
 				TargetAttributes = {
 					F27D8C7C1C03477E00012592 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = P4YP296328;
+						DevelopmentTeam = 77BN3AW3ZP;
 					};
 				};
 			};
@@ -649,11 +661,15 @@
 				F23944AB1C12AE7C00C0458F /* HNMySettingController.xib in Resources */,
 				F23944AD1C12AE7C00C0458F /* HNProfileHeaderView.xib in Resources */,
 				F23944F31C142C5700C0458F /* HNRecordViewController.xib in Resources */,
+				F2CF46B61C2ADC750076E048 /* 倒计数声音.wav in Resources */,
 				F27D8C8D1C03477E00012592 /* Assets.xcassets in Resources */,
 				F27D8CAD1C035BD200012592 /* HNLeftBaseDrawerCell.xib in Resources */,
+				F2CF46B71C2ADC750076E048 /* 咔嚓声音.wav in Resources */,
 				F27D8CA71C035BA700012592 /* HNLeftSideDrawerController.xib in Resources */,
 				F27D8C8B1C03477E00012592 /* Main.storyboard in Resources */,
+				F2CF46BB1C2ADC940076E048 /* icon.png in Resources */,
 				A7BAB5161C14628B000FF9ED /* Default-568h@2x.png in Resources */,
+				F2CF46B91C2ADC890076E048 /* copyright.html in Resources */,
 				F23944D51C14075A00C0458F /* JKImagePickerController.strings in Resources */,
 				A7D4B9FD1C1EFF86006FBE9F /* icon.png in Resources */,
 				F66EBE181C27FAF00037416F /* HNAboutHeaderCell.xib in Resources */,
@@ -911,14 +927,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/朵拍/duopai-Prefix.pch";
 				INFOPLIST_FILE = "朵拍/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
 				PRODUCT_NAME = duopai;
-				PROVISIONING_PROFILE = "179e9215-047c-4393-9f85-840f1dcb1a8e";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -929,14 +945,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/朵拍/duopai-Prefix.pch";
 				INFOPLIST_FILE = "朵拍/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
 				PRODUCT_NAME = duopai;
-				PROVISIONING_PROFILE = "179e9215-047c-4393-9f85-840f1dcb1a8e";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -200,6 +200,7 @@ bail:
     [super viewDidLoad];
     canSnaped = YES;
     self.previewView = [[UIView alloc] init];
+    self.previewView.backgroundColor = [UIColor greenSeaColor];
     [self.view addSubview:self.previewView];
     [self.previewView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide);
@@ -216,7 +217,15 @@ bail:
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self setupAVCapture];
+    
+//    [SVProgressHUD show];
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self setupAVCapture];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [SVProgressHUD dismiss];
+//            [previewLayer.session startRunning];
+//        });
+//    });
 
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
