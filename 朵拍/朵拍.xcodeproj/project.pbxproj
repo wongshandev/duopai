@@ -73,6 +73,16 @@
 		F27D8CCA1C035E5800012592 /* UIScrollView+Parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D8CC91C035E5800012592 /* UIScrollView+Parallax.m */; };
 		F2B1FF7F1C1DB6C600DC19F8 /* CameraMian.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */; };
 		F2B1FF801C1DB6C600DC19F8 /* CameraMian.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */; };
+		F66EBE121C27F9D70037416F /* HNAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE101C27F9D70037416F /* HNAboutViewController.m */; };
+		F66EBE171C27FAF00037416F /* HNAboutHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE151C27FAF00037416F /* HNAboutHeaderCell.m */; };
+		F66EBE181C27FAF00037416F /* HNAboutHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66EBE161C27FAF00037416F /* HNAboutHeaderCell.xib */; };
+		F66EBE1C1C27FB3D0037416F /* HNAboutBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE1A1C27FB3D0037416F /* HNAboutBaseCell.m */; };
+		F66EBE1D1C27FB3D0037416F /* HNAboutBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66EBE1B1C27FB3D0037416F /* HNAboutBaseCell.xib */; };
+		F66EBE331C28016D0037416F /* TOWebViewControllerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F66EBE1F1C28016D0037416F /* TOWebViewControllerLocalizable.strings */; };
+		F66EBE341C28016D0037416F /* TOActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE291C28016D0037416F /* TOActivityChrome.m */; };
+		F66EBE351C28016D0037416F /* TOActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE2B1C28016D0037416F /* TOActivitySafari.m */; };
+		F66EBE361C28016D0037416F /* TOWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE2D1C28016D0037416F /* TOWebViewController.m */; };
+		F66EBE371C28016D0037416F /* UIImage+TOWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F66EBE2F1C28016D0037416F /* UIImage+TOWebViewControllerIcons.m */; };
 		F6E079961C1FED8400DD2252 /* CameraImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E079951C1FED8400DD2252 /* CameraImageHelper.m */; };
 		F6E0799C1C1FFE1700DD2252 /* HNCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E0799A1C1FFE1700DD2252 /* HNCameraController.m */; };
 		F6E0799D1C1FFE1700DD2252 /* HNCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E0799B1C1FFE1700DD2252 /* HNCameraController.xib */; };
@@ -193,6 +203,33 @@
 		F2B1FF7C1C1DB6C600DC19F8 /* CameraMian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraMian.h; sourceTree = "<group>"; };
 		F2B1FF7D1C1DB6C600DC19F8 /* CameraMian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraMian.m; sourceTree = "<group>"; };
 		F2B1FF7E1C1DB6C600DC19F8 /* CameraMian.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraMian.xib; sourceTree = "<group>"; };
+		F66EBE0F1C27F9D70037416F /* HNAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAboutViewController.h; sourceTree = "<group>"; };
+		F66EBE101C27F9D70037416F /* HNAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAboutViewController.m; sourceTree = "<group>"; };
+		F66EBE141C27FAF00037416F /* HNAboutHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAboutHeaderCell.h; sourceTree = "<group>"; };
+		F66EBE151C27FAF00037416F /* HNAboutHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAboutHeaderCell.m; sourceTree = "<group>"; };
+		F66EBE161C27FAF00037416F /* HNAboutHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HNAboutHeaderCell.xib; sourceTree = "<group>"; };
+		F66EBE191C27FB3D0037416F /* HNAboutBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAboutBaseCell.h; sourceTree = "<group>"; };
+		F66EBE1A1C27FB3D0037416F /* HNAboutBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAboutBaseCell.m; sourceTree = "<group>"; };
+		F66EBE1B1C27FB3D0037416F /* HNAboutBaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HNAboutBaseCell.xib; sourceTree = "<group>"; };
+		F66EBE201C28016D0037416F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE211C28016D0037416F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE221C28016D0037416F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE231C28016D0037416F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE241C28016D0037416F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE251C28016D0037416F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE261C28016D0037416F /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE271C28016D0037416F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE281C28016D0037416F /* TOActivityChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivityChrome.h; sourceTree = "<group>"; };
+		F66EBE291C28016D0037416F /* TOActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivityChrome.m; sourceTree = "<group>"; };
+		F66EBE2A1C28016D0037416F /* TOActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivitySafari.h; sourceTree = "<group>"; };
+		F66EBE2B1C28016D0037416F /* TOActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivitySafari.m; sourceTree = "<group>"; };
+		F66EBE2C1C28016D0037416F /* TOWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOWebViewController.h; sourceTree = "<group>"; };
+		F66EBE2D1C28016D0037416F /* TOWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOWebViewController.m; sourceTree = "<group>"; };
+		F66EBE2E1C28016D0037416F /* UIImage+TOWebViewControllerIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TOWebViewControllerIcons.h"; sourceTree = "<group>"; };
+		F66EBE2F1C28016D0037416F /* UIImage+TOWebViewControllerIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TOWebViewControllerIcons.m"; sourceTree = "<group>"; };
+		F66EBE301C28016D0037416F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F66EBE311C28016D0037416F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOWebViewControllerLocalizable.strings"; sourceTree = "<group>"; };
+		F66EBE321C28016D0037416F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TOWebViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		F6E079941C1FED8400DD2252 /* CameraImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraImageHelper.h; sourceTree = "<group>"; };
 		F6E079951C1FED8400DD2252 /* CameraImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraImageHelper.m; sourceTree = "<group>"; };
 		F6E079991C1FFE1700DD2252 /* HNCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCameraController.h; sourceTree = "<group>"; };
@@ -275,6 +312,7 @@
 		F239449C1C12AD6200C0458F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F66EBE0E1C27F9A40037416F /* setting */,
 				A7BAB5211C14729C000FF9ED /* Camera */,
 				A7BAB5111C14624E000FF9ED /* Resource */,
 				F239449D1C12AD6900C0458F /* personal */,
@@ -413,6 +451,7 @@
 		F27D8C981C035B8C00012592 /* opensource */ = {
 			isa = PBXGroup;
 			children = (
+				F66EBE1E1C28016D0037416F /* TOWebViewController */,
 				F27D8CC11C035DC500012592 /* constant.h */,
 				F23944B41C14075A00C0458F /* ImagePicker */,
 				F27D8CB41C035CE500012592 /* category */,
@@ -492,6 +531,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F66EBE0E1C27F9A40037416F /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				F66EBE0F1C27F9D70037416F /* HNAboutViewController.h */,
+				F66EBE101C27F9D70037416F /* HNAboutViewController.m */,
+				F66EBE191C27FB3D0037416F /* HNAboutBaseCell.h */,
+				F66EBE1A1C27FB3D0037416F /* HNAboutBaseCell.m */,
+				F66EBE1B1C27FB3D0037416F /* HNAboutBaseCell.xib */,
+				F66EBE141C27FAF00037416F /* HNAboutHeaderCell.h */,
+				F66EBE151C27FAF00037416F /* HNAboutHeaderCell.m */,
+				F66EBE161C27FAF00037416F /* HNAboutHeaderCell.xib */,
+			);
+			name = setting;
+			sourceTree = "<group>";
+		};
+		F66EBE1E1C28016D0037416F /* TOWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F66EBE1F1C28016D0037416F /* TOWebViewControllerLocalizable.strings */,
+				F66EBE281C28016D0037416F /* TOActivityChrome.h */,
+				F66EBE291C28016D0037416F /* TOActivityChrome.m */,
+				F66EBE2A1C28016D0037416F /* TOActivitySafari.h */,
+				F66EBE2B1C28016D0037416F /* TOActivitySafari.m */,
+				F66EBE2C1C28016D0037416F /* TOWebViewController.h */,
+				F66EBE2D1C28016D0037416F /* TOWebViewController.m */,
+				F66EBE2E1C28016D0037416F /* UIImage+TOWebViewControllerIcons.h */,
+				F66EBE2F1C28016D0037416F /* UIImage+TOWebViewControllerIcons.m */,
+			);
+			path = TOWebViewController;
+			sourceTree = "<group>";
+		};
 		FA430F84177642CE6E18E7CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,7 +605,7 @@
 				TargetAttributes = {
 					F27D8C7C1C03477E00012592 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4J7549764U;
+						DevelopmentTeam = P4YP296328;
 					};
 				};
 			};
@@ -547,6 +617,15 @@
 				en,
 				Base,
 				"zh-Hans",
+				de,
+				es,
+				fr,
+				ja,
+				ko,
+				pl,
+				ru,
+				uk,
+				"zh-Hant",
 			);
 			mainGroup = F27D8C741C03477E00012592;
 			productRefGroup = F27D8C7E1C03477E00012592 /* Products */;
@@ -565,6 +644,7 @@
 			files = (
 				F27D8C901C03477E00012592 /* LaunchScreen.storyboard in Resources */,
 				F23944A91C12AE7C00C0458F /* HNSettingBaseCell.xib in Resources */,
+				F66EBE331C28016D0037416F /* TOWebViewControllerLocalizable.strings in Resources */,
 				F6E0799D1C1FFE1700DD2252 /* HNCameraController.xib in Resources */,
 				F23944AB1C12AE7C00C0458F /* HNMySettingController.xib in Resources */,
 				F23944AD1C12AE7C00C0458F /* HNProfileHeaderView.xib in Resources */,
@@ -576,6 +656,8 @@
 				A7BAB5161C14628B000FF9ED /* Default-568h@2x.png in Resources */,
 				F23944D51C14075A00C0458F /* JKImagePickerController.strings in Resources */,
 				A7D4B9FD1C1EFF86006FBE9F /* icon.png in Resources */,
+				F66EBE181C27FAF00037416F /* HNAboutHeaderCell.xib in Resources */,
+				F66EBE1D1C27FB3D0037416F /* HNAboutBaseCell.xib in Resources */,
 				F23944D61C14075A00C0458F /* ImagesPicker.xcassets in Resources */,
 				F2B1FF801C1DB6C600DC19F8 /* CameraMian.xib in Resources */,
 				F23944ED1C1418C400C0458F /* HNHomeTableCell.xib in Resources */,
@@ -637,6 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66EBE121C27F9D70037416F /* HNAboutViewController.m in Sources */,
 				F27D8CCA1C035E5800012592 /* UIScrollView+Parallax.m in Sources */,
 				F23944AA1C12AE7C00C0458F /* HNMySettingController.m in Sources */,
 				F6E079961C1FED8400DD2252 /* CameraImageHelper.m in Sources */,
@@ -647,12 +730,15 @@
 				F27D8CB01C035C3600012592 /* TDBadgedCell.m in Sources */,
 				F23944B01C12B1F600C0458F /* HNPickerViewController.m in Sources */,
 				F23944DA1C14075A00C0458F /* JKAssetsGroupsView.m in Sources */,
+				F66EBE341C28016D0037416F /* TOActivityChrome.m in Sources */,
 				F27D8CA41C035BA700012592 /* HNDrawerController.m in Sources */,
 				F27D8CAC1C035BD200012592 /* HNLeftBaseDrawerCell.m in Sources */,
 				F27D8CC61C035E1C00012592 /* HNTabBarController.m in Sources */,
 				F27D8CA51C035BA700012592 /* HNSideDrawerViewController.m in Sources */,
+				F66EBE361C28016D0037416F /* TOWebViewController.m in Sources */,
 				F23944DE1C14075A00C0458F /* JKPhotoBrowser.m in Sources */,
 				F27D8CC71C035E1C00012592 /* HNTabBar.m in Sources */,
+				F66EBE1C1C27FB3D0037416F /* HNAboutBaseCell.m in Sources */,
 				F23944E31C14075A00C0458F /* UIView+JKPicker.m in Sources */,
 				F27D8CB71C035D3900012592 /* UIColor+utils.m in Sources */,
 				F27D8C851C03477E00012592 /* AppDelegate.m in Sources */,
@@ -660,9 +746,12 @@
 				F27D8CA61C035BA700012592 /* HNLeftSideDrawerController.m in Sources */,
 				F23944F61C142EBF00C0458F /* SCTouchDetector.m in Sources */,
 				F23944F11C142C0700C0458F /* HNRecordViewController.m in Sources */,
+				F66EBE351C28016D0037416F /* TOActivitySafari.m in Sources */,
 				F27D8CB31C035CA200012592 /* HNDrawerViewController.m in Sources */,
 				F6E079A01C20024800DD2252 /* UIImage+RotationMethods.m in Sources */,
+				F66EBE171C27FAF00037416F /* HNAboutHeaderCell.m in Sources */,
 				F23944F91C14309900C0458F /* SCRecordSessionManager.m in Sources */,
+				F66EBE371C28016D0037416F /* UIImage+TOWebViewControllerIcons.m in Sources */,
 				F23944DB1C14075A00C0458F /* JKAssetsThumbnailView.m in Sources */,
 				F23944D91C14075A00C0458F /* JKAssetsGroupCell.m in Sources */,
 				F27D8CA31C035BA700012592 /* HNDrawerVisualStateManager.m in Sources */,
@@ -712,6 +801,24 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		F66EBE1F1C28016D0037416F /* TOWebViewControllerLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F66EBE201C28016D0037416F /* de */,
+				F66EBE211C28016D0037416F /* en */,
+				F66EBE221C28016D0037416F /* es */,
+				F66EBE231C28016D0037416F /* fr */,
+				F66EBE241C28016D0037416F /* ja */,
+				F66EBE251C28016D0037416F /* ko */,
+				F66EBE261C28016D0037416F /* pl */,
+				F66EBE271C28016D0037416F /* ru */,
+				F66EBE301C28016D0037416F /* uk */,
+				F66EBE311C28016D0037416F /* zh-Hans */,
+				F66EBE321C28016D0037416F /* zh-Hant */,
+			);
+			name = TOWebViewControllerLocalizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -732,8 +839,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -776,8 +883,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -804,14 +911,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/朵拍/duopai-Prefix.pch";
 				INFOPLIST_FILE = "朵拍/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
 				PRODUCT_NAME = duopai;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "179e9215-047c-4393-9f85-840f1dcb1a8e";
 			};
 			name = Debug;
 		};
@@ -821,14 +928,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Lingbao Electronics Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen AGPC Science Polytron Technologies Inc.";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/朵拍/duopai-Prefix.pch";
 				INFOPLIST_FILE = "朵拍/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wongshan.duopai;
 				PRODUCT_NAME = duopai;
+				PROVISIONING_PROFILE = "179e9215-047c-4393-9f85-840f1dcb1a8e";
 			};
 			name = Release;
 		};

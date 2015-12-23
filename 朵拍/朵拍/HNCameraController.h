@@ -18,7 +18,7 @@
 
 @interface HNCameraController : UIViewController <UIGestureRecognizerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 {
-
+    BOOL canSnaped;
 }
 
 @property(nonatomic,strong)UIView *previewView;

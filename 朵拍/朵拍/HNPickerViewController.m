@@ -103,7 +103,7 @@
     [[NSUserDefaults standardUserDefaults] setValue:[self.dataArray objectAtIndex:indexPath.row] forKey:[self settingkey]];
     
    // AudioServicesPlaySystemSound([[resuleArr objectAtIndex:indexPath.row]integerValue]);
-    
+    self.completeBlock([self.dataArray objectAtIndex:indexPath.row] );
     [tableView reloadData];
 }
 

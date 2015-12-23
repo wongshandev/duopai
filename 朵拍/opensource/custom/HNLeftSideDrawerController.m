@@ -12,6 +12,7 @@
 #import "HNProfileHeaderView.h"
 #import "HNMySettingController.h"
 #import "JKImagePickerController.h"
+#import "HNAboutViewController.h"
 static NSString* categoryCell = @"leftCell";
 //static float const NAVBAR_CHANGE_POINT = 50;
 @interface HNLeftSideDrawerController ()<JKImagePickerControllerDelegate>
@@ -94,6 +95,7 @@ static NSString* categoryCell = @"leftCell";
             JKImagePickerController *imagePickerController = [[JKImagePickerController alloc] init];
             imagePickerController.delegate = self;
             imagePickerController.showsCancelButton = YES;
+            imagePickerController.maximumNumberOfSelection = 9;
 //            imagePickerController.allowsMultipleSelection = YES;
 //            imagePickerController.minimumNumberOfSelection = 1;
             //imagePickerController.maximumNumberOfSelection = [this maximumNumberOfImage];
@@ -108,7 +110,12 @@ static NSString* categoryCell = @"leftCell";
         }
         case HNLeftDrawerSelectionAboutUs:
         {
-
+            HNAboutViewController* setting = [[HNAboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            [(UINavigationController*)self.mm_drawerController.centerViewController  pushViewController:setting animated:NO];
+            [self.mm_drawerController
+             setCenterViewController:self.mm_drawerController.centerViewController
+             withCloseAnimation:YES
+             completion:nil];
             break;
         }
         case HNLeftDrawerSelectionMySetting:
