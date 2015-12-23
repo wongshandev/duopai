@@ -77,4 +77,9 @@ static NSString* const HNLoginCheckNotification = @"HNLoginCheckNotification";//
 
 #define __HS_CAMERA__ //自定义的摄像界面。
 
+
+#define UMENG_APP_KEY  @"567a7df1e0f55a4ef3002230" //友盟的APP KEY。
+#define  WEIXIN_APPKEY    @"wx0c9034479c7c6739"   //微信用到的APPKEY
+#define  WEIXIN_SECRT      @"6f6b3598e25c429978d05c202dd586d5" //微信用于的SERCT KEY
+
 #endif
