@@ -20,6 +20,10 @@
 		A7BAB5301C147417000FF9ED /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BAB52F1C147417000FF9ED /* AssetsLibrary.framework */; };
 		A7BAB5331C1474AA000FF9ED /* DetectFace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BAB5321C1474AA000FF9ED /* DetectFace.m */; };
 		A7D4B9FD1C1EFF86006FBE9F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D4B9FC1C1EFF86006FBE9F /* icon.png */; };
+		A7D930561C2C229C00C081B7 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D930521C2C229C00C081B7 /* 1.png */; };
+		A7D930571C2C229C00C081B7 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D930531C2C229C00C081B7 /* 2.png */; };
+		A7D930581C2C229C00C081B7 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D930541C2C229C00C081B7 /* 3.png */; };
+		A7D930591C2C229C00C081B7 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D930551C2C229C00C081B7 /* 4.png */; };
 		F239449B1C12ABAF00C0458F /* HNHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F239449A1C12ABAF00C0458F /* HNHomePageController.m */; };
 		F23944A81C12AE7C00C0458F /* HNSettingBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F23944A01C12AE7C00C0458F /* HNSettingBaseCell.m */; };
 		F23944A91C12AE7C00C0458F /* HNSettingBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F23944A11C12AE7C00C0458F /* HNSettingBaseCell.xib */; };
@@ -109,6 +113,10 @@
 		A7BAB5311C1474AA000FF9ED /* DetectFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectFace.h; sourceTree = "<group>"; };
 		A7BAB5321C1474AA000FF9ED /* DetectFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectFace.m; sourceTree = "<group>"; };
 		A7D4B9FC1C1EFF86006FBE9F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A7D930521C2C229C00C081B7 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		A7D930531C2C229C00C081B7 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		A7D930541C2C229C00C081B7 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		A7D930551C2C229C00C081B7 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		E1D747C3586DE5AEFCAF7DDB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23944991C12ABAF00C0458F /* HNHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNHomePageController.h; sourceTree = "<group>"; };
 		F239449A1C12ABAF00C0458F /* HNHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNHomePageController.m; sourceTree = "<group>"; };
@@ -451,6 +459,10 @@
 		F27D8C801C03477E00012592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7D930521C2C229C00C081B7 /* 1.png */,
+				A7D930531C2C229C00C081B7 /* 2.png */,
+				A7D930541C2C229C00C081B7 /* 3.png */,
+				A7D930551C2C229C00C081B7 /* 4.png */,
 				F2CF46BA1C2ADC940076E048 /* icon.png */,
 				F2CF46B81C2ADC890076E048 /* copyright.html */,
 				F2CF46B41C2ADC750076E048 /* 倒计数声音.wav */,
@@ -663,8 +675,11 @@
 				F23944F31C142C5700C0458F /* HNRecordViewController.xib in Resources */,
 				F2CF46B61C2ADC750076E048 /* 倒计数声音.wav in Resources */,
 				F27D8C8D1C03477E00012592 /* Assets.xcassets in Resources */,
+				A7D930591C2C229C00C081B7 /* 4.png in Resources */,
+				A7D930561C2C229C00C081B7 /* 1.png in Resources */,
 				F27D8CAD1C035BD200012592 /* HNLeftBaseDrawerCell.xib in Resources */,
 				F2CF46B71C2ADC750076E048 /* 咔嚓声音.wav in Resources */,
+				A7D930571C2C229C00C081B7 /* 2.png in Resources */,
 				F27D8CA71C035BA700012592 /* HNLeftSideDrawerController.xib in Resources */,
 				F27D8C8B1C03477E00012592 /* Main.storyboard in Resources */,
 				F2CF46BB1C2ADC940076E048 /* icon.png in Resources */,
@@ -673,6 +688,7 @@
 				F23944D51C14075A00C0458F /* JKImagePickerController.strings in Resources */,
 				A7D4B9FD1C1EFF86006FBE9F /* icon.png in Resources */,
 				F66EBE181C27FAF00037416F /* HNAboutHeaderCell.xib in Resources */,
+				A7D930581C2C229C00C081B7 /* 3.png in Resources */,
 				F66EBE1D1C27FB3D0037416F /* HNAboutBaseCell.xib in Resources */,
 				F23944D61C14075A00C0458F /* ImagesPicker.xcassets in Resources */,
 				F2B1FF801C1DB6C600DC19F8 /* CameraMian.xib in Resources */,

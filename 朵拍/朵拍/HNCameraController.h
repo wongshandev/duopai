@@ -19,9 +19,13 @@
 @interface HNCameraController : UIViewController <UIGestureRecognizerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 {
     BOOL canSnaped;
+    /*人脸是否在中央*/
+    BOOL IsFaceInCenter;
 }
 
 @property(nonatomic,strong)UIView *previewView;
+
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *segment;
 @property (weak, nonatomic) IBOutlet UISwitch *facedetect;
 @property (weak, nonatomic) id<HNDeviceShouldRotationDelegate> deviceDelgate;

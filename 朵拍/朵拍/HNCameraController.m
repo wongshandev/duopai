@@ -109,6 +109,10 @@ static CGContextRef CreateCGBitmapContextForSize(CGSize size)
     CIDetector *faceDetector;
     CGFloat beginGestureScale;
     CGFloat effectiveScale;
+    /*倒计时的view*/
+    UIImageView *CountView;
+    UIImage *CountImage;
+
 }
 //初始化 相机
 - (void)setupAVCapture;
@@ -209,6 +213,15 @@ bail:
         make.right.equalTo(self.view.mas_right);
     }];
     
+    /*绘制倒计时view*/
+    CountImage = [UIImage imageNamed:@"1.png"];
+    CountView = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-CountImage.size.width)/2, (self.view.frame.size.height-CountImage.size.height)/2, CountImage.size.width, CountImage.size.height)];
+    CountView.backgroundColor = [UIColor clearColor];
+    CountView.image = CountImage;
+    CountView.alpha = 0.5;
+    [self.view addSubview:CountView];
+    /*绘制倒计时view End */
+
     square = [UIImage imageNamed:@"mask"];
     NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyLow, CIDetectorAccuracy, nil];
     faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
@@ -531,15 +544,20 @@ bail:
         
         CGFloat unionCenterX =  UIDeviceOrientationIsLandscape(orientation) ? screenWidth - CGRectGetMidY(unionRect): CGRectGetMidX(unionRect);
     
-        if (fabs(screenWidth/2. - unionCenterX) <= 10) {
-            if (canSnaped) {
+        if (fabs(screenWidth/2. - unionCenterX) <= 10)
+        {
+            if (canSnaped)
+            {
                [self snap:nil];
                 canSnaped = NO;
+                /*拍照第一步：如果在中间区域定了2秒，那么开始启动拍照倒计时*/
                 [self performSelector:@selector(setCanSnape) withObject:nil afterDelay:3];
             }
             
             return;
         }
+        /*这个标志位是倒计时用。如果不在中央了，那就不倒计时*/
+        IsFaceInCenter = NO;
         
         NSLog(@"screenWidth/2. - unionCenterX %f",screenWidth/2. - unionCenterX) ;
         if ((screenWidth/2. - unionCenterX) > 0) {
@@ -554,8 +572,26 @@ bail:
     }
     
 }
+/*画倒计时界面。*/
+- (void)DrawCountDown:(NSString * )count
+{
+    
+}
+-(void)Snape_ex
+{
+    /*拍照第三步：开始倒计时了。这里要判断人脸有没有跑偏。*/
+    if(IsFaceInCenter == YES)
+    {
+        
+    }
+}
 
 -(void)setCanSnape{
+    /*拍照第二步：启动倒计时了。这时候如果人脸跑偏了，就要取消这个倒计时，重新来。*/
+    if (IsFaceInCenter == YES)
+    {
+        [self performSelector:@selector(Snape_ex) withObject:nil afterDelay:3];
+    }
     canSnaped = YES;
 }
 
